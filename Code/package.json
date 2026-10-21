@@ -1,0 +1,17 @@
+{
+  "name": "staffsync",
+  "version": "1.0.0",
+  "description": "StaffSync - Modern Human Resource Management Solution (MERN Stack)",
+  "scripts": {
+    "install-all": "npm install && npm install --prefix backend && npm install --prefix frontend",
+    "seed": "npm run seed --prefix backend",
+    "seed:db": "node database/seed.js",
+    "backend": "npm run dev --prefix backend",
+    "frontend": "npm run dev --prefix frontend",
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
+    "start": "npm run dev"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
